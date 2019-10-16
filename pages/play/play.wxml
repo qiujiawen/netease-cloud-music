@@ -1,0 +1,40 @@
+<!--pages/play/play.wxml-->
+<wxs src="./time.wxs" module="times"></wxs>
+<view class="page">
+    <image src="{{song.al.picUrl}}" class="img"></image>
+
+    <view class="sliderText">
+        <text class='now'>{{times.time(currentTime/60)}}:{{times.time(currentTime%60)}}</text>
+        <slider 
+            min='0' 
+            max='{{duration}}' 
+            step='1' 
+            block-size="15" 
+            value="{{currentTime}}"
+            bindchanging="sliderChangeIng"
+            bindchange="sliderChangeEnd"
+            class="slider"
+        ></slider>
+        <text class="duration">{{times.time(duration/60)}}:{{times.time(duration%60)}}</text>
+    </view>
+
+    <view class="icon">
+        <text class="iconfont icon-shangyiye" bind:tap='onMusicPrevious'></text>
+        <text class="iconfont {{icon}}" bind:tap="onMusicPlay"></text>
+        <text class="iconfont icon-xiayiye" bind:tap="onMusicNext"></text>
+    </view>
+
+    <scroll-view 
+    class='scroll' 
+    scroll-y="{{true}}" 
+    scroll-into-view='{{currentLrc}}'
+    scroll-with-animation = 'true'
+    >
+        <view 
+            wx:for='{{lrc}}' 
+            wx:key='{{index}}' 
+            id='el-{{index}}'
+            class="{{currentLrc === 'el-' + index ? 'action':''}}"
+        >{{lrc[index]}}</view>
+    </scroll-view>
+</view>

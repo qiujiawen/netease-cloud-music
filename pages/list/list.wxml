@@ -1,0 +1,21 @@
+<!--pages/detail/detail.wxml-->
+<scroll-view 
+    class="page addPage"
+    scroll-y
+    bindscrolltolower="lower"
+    lower-threshold
+>
+    <view 
+    wx:for="{{list}}" 
+    wx:key="{{id}}" 
+    class="item" 
+    bind:tap = 'onTap'
+    data-id = '{{item.id}}'
+    >
+        <image src="{{item.al.picUrl}}"></image>
+        <view class="text">
+            <view>{{item.name}}</view>
+            <view class="author">{{item.ar[0].name}}</view>
+        </view>
+    </view>
+</scroll-view>

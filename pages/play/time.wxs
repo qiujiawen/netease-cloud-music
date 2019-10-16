@@ -1,0 +1,6 @@
+module.exports = {
+    time: function(num){
+        num = Math.floor(num);
+        return num < 10 ? '0' + num : num;
+    },
+}

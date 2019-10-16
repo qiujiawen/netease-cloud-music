@@ -1,0 +1,29 @@
+/* pages/detail/detail.wxss */
+@import '../../common/style/common.wxss';
+
+.addPage{
+    height: 100vh;
+}
+
+.item{
+    background-color: #666;
+    margin-bottom: 10rpx;
+    display: flex;
+    flex: 1;
+}
+
+.item image{
+    width: 200rpx;
+    height: 200rpx;
+    border-radius: 10rpx;
+}
+
+.text{
+    color: #fff;
+    font-size: 15px;
+    margin: 20rpx;
+}
+
+.author{
+    color: red;
+}

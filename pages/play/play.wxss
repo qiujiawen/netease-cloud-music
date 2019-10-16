@@ -1,0 +1,54 @@
+/* pages/play/play.wxss */
+/* @import '../../common/style/common.wxss'; */
+.img{
+    width: 375rpx;
+    height: 375rpx;
+    border: 30rpx solid rgba(0, 0, 0, .8);
+    box-sizing: border-box;
+    border-radius: 50%;
+    position: relative;
+    left: 50%;
+    margin-left: -187.5rpx;
+}
+
+.sliderText{
+    box-sizing: border-box;
+    display:flex;
+    flex: 1;
+    justify-content: space-around;
+    align-items: center;
+    height: 30rpx;
+}
+
+.slider{
+    width: 510rpx;
+    margin: 0;
+    padding: 0;
+} 
+
+.now, .duration{
+    font-size: 10px;
+    color: #666;
+    width: 70rpx;
+}
+
+.icon{
+    display: flex;
+    justify-content: center;
+    margin-top: 20rpx;
+    margin-bottom: 40rpx;
+}
+
+.icon text{
+    margin: 0 30rpx;
+}
+
+.scroll{
+    height: 100rpx;
+    color: #666;
+    font-size: 25rpx;
+    text-align: center;
+}
+.action{
+    color: red;
+}

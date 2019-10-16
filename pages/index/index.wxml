@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<view class="page">
+    <view 
+    class="wrap {{currentIndex == index ? 'tap': ''}}"
+    wx:for="{{type}}" 
+    wx:key='{{index}}' 
+    bind:tap = "onTap"
+    data-id = '{{index}}'
+    >
+        <text class="index">{{index+1}}、</text>
+        <text class="text">{{item[index]}}</text>
+    </view>    
+</view>
